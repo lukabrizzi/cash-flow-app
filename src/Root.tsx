@@ -1,17 +1,18 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import { Theme } from "@mui/material";
 
 const Root = () => {
   const classes = useStyles();
-  return <div>Holaasss</div>;
+  return <div className={classes.root}></div>;
 };
 
-const useStyles = makeStyles((theme) => {
+const useStyles = makeStyles((theme: Theme) => {
   console.log("theme", theme);
   return {
     root: {
       height: "100vh",
-      backgroundColor: "red",
+      backgroundColor: theme.palette.grey[300],
     },
   };
 });
